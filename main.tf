@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
 module "lambda_function_externally_managed_package" {
   source = "terraform-aws-modules/lambda/aws"
 
