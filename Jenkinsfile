@@ -29,5 +29,10 @@ pipeline{
                 sh "terraform apply -var-file='dev.tfvars' -auto-approve"
             }
         }
+        stage("cleanup"){
+            steps{
+                sh "rm -Rf index.zip"
+            }
+        }
     }
 }
