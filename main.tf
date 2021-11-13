@@ -7,7 +7,7 @@ module "lambda_function_externally_managed_package" {
 
   function_name = "${var.name}"
   handler       = "index.lambda_handler"
-  runtime       = "nodejs12"
+  runtime       = "nodejs12.x"
 
   create_package         = false
   local_existing_package = "./index.zip"
